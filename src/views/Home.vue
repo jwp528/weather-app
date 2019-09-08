@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container fluid>
+    <v-layout column>
+      <v-flex xs12>
+        <v-layout align-start justify-content-start row>
+          <CurrentWeather />
+          <Clock />
+        </v-layout>
+        <News />
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Clock from "../components/Clock";
+import News from '../components/News';
+import CurrentWeather from '../components/CurrentWeather';
 
-export default {
-  name: 'home',
+import { Vue, Component, Prop } from "vue-property-decorator";
+
+@Component({
   components: {
-    HelloWorld
+    Clock,
+    News,
+    CurrentWeather
   }
+})
+export default class Home extends Vue {
+  mounted() {}
 }
 </script>
