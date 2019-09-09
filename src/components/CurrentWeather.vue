@@ -1,36 +1,32 @@
 <template>
-    <v-flex xs-4>
-        <p class="display-1 font-weight-thin">
-            <v-img :src="weather.data.weather[0].icon" height="120" width="120" class="pa-0 ma-0" />
-            {{weather.data.weather[0].main}}
-        </p>
+  <v-flex xs4>
+    <v-layout justify-start align-start row>
+      <v-flex xs4>
         <h1 class="display-4 font-weight-thin left pr-3">
-            {{parseInt(weather.data.main.temp)}}
-            <span
+          {{parseInt(weather.data.main.temp)}}
+          <span
             class="display-3 font-weight-thin"
             style="position:relative;top:-40px;left:-20px;"
-            >°</span>
-            C
+          >°</span>
         </h1>
-    </v-flex>
+      </v-flex>
+      <v-flex xs1 style="position:relative; right:100px;">
+        <v-img :src="weather.data.weather[0].icon" height="120" width="120" />
+      </v-flex>
+      <v-flex xs1 style="position:relative; right:100px;">
+        <span class="display-1 font-weight-thin">{{weather.data.weather[0].main}}</span>
+      </v-flex>
+    </v-layout>
+  </v-flex>
 </template>
 <script>
-    import { Vue, Component, Prop } from "vue-property-decorator";
-    import { State, Getter, Action, Mutation, namespace } from 'vuex-class';
+import { Vue, Component, Prop } from "vue-property-decorator";
+import { State, Getter, Action, Mutation, namespace } from "vuex-class";
 
-    const weather = namespace('weather/');
+const weather = namespace("weather/");
 
-    @Component()
-    export default class CurrentWeather extends Vue {
-        @State weather;
-        @weather.Action fetch;
-
-        async setup() {
-            await this.fetch();
-        }
-
-        mounted() {
-            this.setup();
-        }
-    }
+@Component()
+export default class CurrentWeather extends Vue {
+  @State weather;
+}
 </script>

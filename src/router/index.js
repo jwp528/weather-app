@@ -13,20 +13,16 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
-            beforeEnter: async(to, from, next) => {
+            beforeEnter: async (to, from, next) => {
+                try {
+                    store.dispatch('weather/fetch');
+                    store.dispatch('news/fetch');
 
-
-
-                next();
+                    next();
+                } catch (e) {
+                    console.error(e);
+                }
             }
-        },
-        {
-            path: '/about',
-            name: 'about',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
         }
     ]
 })
