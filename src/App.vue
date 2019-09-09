@@ -11,6 +11,8 @@
 body,
 html {
   background: #303030;
+  max-width: 15in;
+  margin:0 auto;
 }
 </style>
 

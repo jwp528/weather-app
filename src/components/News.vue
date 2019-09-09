@@ -1,9 +1,6 @@
 <template>
-  <v-layout align-center justify-center row fill-height class="mt-5 pt-5 news">
+  <v-layout align-center justify-center row fill-height class="news">
     <v-flex xs12>
-      <br />
-      <br />
-      <br />
       <h1
         class="display-3 font-weight-thin text-xs-center"
         transition="fade-transition"
@@ -17,7 +14,7 @@
 </template>
 <style>
 .news {
-  min-height: 3in;
+  max-height: 3in;
 }
 </style>
 <script>
