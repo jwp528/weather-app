@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
-    <fullscreen ref="fullscreen">
+    <!-- <fullscreen ref="fullscreen"> -->
       <v-content>
         <router-view></router-view>
       </v-content>
-    </fullscreen>
+    <!-- </fullscreen> -->
   </v-app>
 </template>
 <style>
@@ -13,6 +13,7 @@ html {
   background: #303030;
   max-width: 15in;
   margin:0 auto;
+  overflow-y: hidden;
 }
 </style>
 
@@ -25,7 +26,7 @@ export default class App extends Vue {
   name = "App";
 
   mounted() {
-    this.$refs["fullscreen"].toggle();
+    // this.$refs["fullscreen"].toggle();
   }
 }
 </script>

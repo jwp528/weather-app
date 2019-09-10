@@ -5,6 +5,9 @@ const state = {
     data: {
         main: {
             temp: 0
+        },
+        weather: {
+          icon: '',
         }
     }
 }

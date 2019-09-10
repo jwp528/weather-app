@@ -2,15 +2,20 @@
   <v-flex xs4>
     <v-layout justify-start align-start row>
       <v-flex shrink>
-        <h1 class="display-4 font-weight-thin left pr-3">
-          {{parseInt(weather.data.main.temp)}}°C
+        <h4 class="display-1 font-weight-thin">H: {{parseInt(weather.data.main.temp_max)}}°  L: {{parseInt(weather.data.main.temp_min)}}°</h4>
+      </v-flex>
+    </v-layout>
+    <v-layout justify-start align-start row>
+      <v-flex shrink>
+        <h1 class="display-4 font-weight-thin">
+          {{parseInt(weather.data.main.temp)}}°
         </h1>
       </v-flex>
       <v-flex xs1>
-        <v-img :src="weather.data.weather[0].icon" height="120" width="120" />
+        <v-img :src="weather.data.weather.icon" height="120" width="120" />
       </v-flex>
       <v-flex xs1 >
-        <span class="display-1 font-weight-thin">{{weather.data.weather[0].main}}</span>
+        <span class="display-1 font-weight-thin">{{weather.data.weather.main}}</span>
       </v-flex>
     </v-layout>
   </v-flex>
