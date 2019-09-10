@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs8 class="right">
+  <v-flex xs8 class="right mb-5">
     <h1 class="display-4 font-weight-thin right pr-3">
       {{main}}
       <span

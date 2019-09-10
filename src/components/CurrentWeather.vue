@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs4>
+  <v-flex xs4 class='mb-5'>
     <v-layout justify-start align-start row>
       <v-flex shrink>
         <h4 class="display-1 font-weight-thin">H: {{parseInt(weather.data.main.temp_max)}}°  L: {{parseInt(weather.data.main.temp_min)}}°</h4>
