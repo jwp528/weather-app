@@ -26,7 +26,6 @@
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.2",
     "vuex-router-sync": "^5.0.0",
-    "vuex-subscription-manager": "^1.1.0"
   },
   "devDependencies": {
     "@babel/register": "^7.4.4",
