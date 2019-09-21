@@ -5,7 +5,7 @@
         :src="headline.enclosure.url"
         width="500"
         ratio="16:9"
-        class="mt-5"
+        class="mt-9"
         style="margin:0 auto"
       />
       <h1
