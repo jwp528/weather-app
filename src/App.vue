@@ -10,10 +10,12 @@
 <style>
 body,
 html {
+  cursor:none;
   background: #303030;
   max-width: 15in;
   margin:0 auto;
   overflow-y: hidden;
+  height:100%;
 }
 </style>
 

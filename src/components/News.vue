@@ -1,5 +1,5 @@
 <template>
-  <v-layout align-center justify-center row fill-height class="text-xs-center mt-5">
+  <v-layout align-center justify-center column fill-height class="text-xs-center mt-5">
     <v-flex xs12>
       <h1
         class="display-3 font-weight-thin text-xs-center"
@@ -19,11 +19,6 @@
     </v-flex>
   </v-layout>
 </template>
-<style>
-/* .news {
-  max-height: 3in;
-} */
-</style>
 <script>
 import { Vue, Component, Prop } from "vue-property-decorator";
 import { State, Getter, Action, Mutation, namespace } from "vuex-class";
