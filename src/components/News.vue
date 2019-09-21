@@ -1,6 +1,6 @@
 <template>
   <v-layout column>
-    <v-layout align-center justify-center row fill-height class="text-xs-center">
+    <v-layout align-center justify-center row fill-height class="text-xs-center mt-5">
       <v-flex xs12>
         <v-img :src="headline.enclosure.url" width="500" ratio="16:9" style="margin:0 auto" />
         <h1
