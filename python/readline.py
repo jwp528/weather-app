@@ -2,11 +2,12 @@ import serial
 import time
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
+val = "OFF";
+
 while True:
 	try:
 		state = ser.readline()
-		print(state)
-		if state == "OFF":
+		if state == "OFF" :
 			time.sleep(1)
 
 		if state == "ON":
