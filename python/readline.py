@@ -1,18 +1,17 @@
 import serial
-import time
+from subprocess import call
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
-val = "OFF";
 
 while True:
-	try:
-		state = ser.readline()
-		if state == "OFF" :
-			call(["/usr/bin/vcgencmd", "display_power", "0"])
-			time.sleep(1)
+    try:
+        state = ser.readline().strip()
+        if state == 'OFF':
+            call('vcgencmd display_power 0', shell=True)
 
-		if state == "ON":
-			call(["/usr/bin/vcgencmd", "display_power", "1"])
-			time.sleep(30)
-	except KeyboardInterrupt:
-		exit()
+        if state == 'ON':
+            call('vcgencmd display_power 1', shell=True)
+
+    except KeyboardInterrupt:
+        exit()
+
