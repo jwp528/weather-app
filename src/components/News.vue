@@ -1,5 +1,5 @@
 <template>
-  <v-layout align-center justify-center column fill-height class="text-xs-center">
+  <v-layout align-center justify-center row fill-height class="text-xs-center mt-5">
     <v-flex xs12>
       <h1
         class="display-3 font-weight-thin text-xs-center"
@@ -9,7 +9,13 @@
         class="display-1 font-weight-thin text-xs-center"
         transition="fade-transition"
       >{{headline.content}}</h4>
-      <v-img :src="headline.enclosure.url" width="500" ratio="16:9" class="mt-3" style="margin:0 auto" />
+      <v-img
+        :src="headline.enclosure.url"
+        width="500"
+        ratio="16:9"
+        class="mt-3"
+        style="margin:0 auto"
+      />
     </v-flex>
   </v-layout>
 </template>
