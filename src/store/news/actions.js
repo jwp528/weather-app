@@ -19,7 +19,7 @@ export default {
                 commit('next');
             }, process.env.VUE_APP_NEWSFEED_SCROLL_TIME);
         } catch (e) {
-            console.error(e);
+            window.location.reload();
         }
     }
 }

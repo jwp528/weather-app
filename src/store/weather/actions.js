@@ -10,7 +10,7 @@ export default {
                 commit('set', response.data);
             }, 60000);// Every minute
         } catch (e) {
-            console.error(e);
+            window.location.reload();
         }
     }
 }
