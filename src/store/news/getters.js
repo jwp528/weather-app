@@ -1,5 +1,10 @@
-export default{
+export default {
     headline: state => {
-        return state.data.items[state.curIdx];
+        let headline = state.data.items[state.curIdx];
+
+        if (typeof headline === 'undefined') {
+            window.location.reload();
+        }
+        return headline;
     }
 }
