@@ -32,7 +32,7 @@
     </v-layout>
     <v-layout v-if="true" align-center justify-center row fill-height class="text-xs-center mt-5">
       <v-flex xs12>
-        <v-img :src="currentPhoto" width="700" ratio="16:9" style="margin:0 auto" />
+        <v-img :src="currentPhoto" width="600" ratio="16:9" style="margin:0 auto" />
         <h1
           class="display-3 font-weight-thin text-xs-center"
           transition="fade-transition"
