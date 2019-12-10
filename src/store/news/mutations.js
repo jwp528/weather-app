@@ -1,5 +1,5 @@
 export default {
-    set: (state, {lastBuildDate, items}) => {
+    set: (state, { lastBuildDate, items }) => {
         let d = {
             lastBuildDate,
             items
@@ -7,9 +7,16 @@ export default {
         state.data = d;
     },
     next: (state) => {
-        if(state.curIdx == (state.data.items.length-1))
+        if (state.curIdx == (state.data.items.length - 1))
             state.curIdx = 0;
         else
             state.curIdx += 1;
+    },
+    rotate: (state) => {
+        if (state.currentPhoto === 10) {
+            state.currentPhoto = 1;
+        } else {
+            ++state.currentPhoto;
+        }
     }
 }

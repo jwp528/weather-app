@@ -1,4 +1,5 @@
 // use rss-parser to get feed
+const moment = require('moment');
 const Parser = require('rss-parser');
 const parser = new Parser();
 
@@ -18,6 +19,14 @@ export default {
 
                 commit('next');
             }, process.env.VUE_APP_NEWSFEED_SCROLL_TIME);
+
+            const today = moment();
+            const anniversary = moment(`12/10/${today.format("YYYY")}`);
+            const isAnniversary = today.isSame(anniversary);
+
+            setInterval(() => {
+                commit('rotate');
+            }, 10000)
         } catch (e) {
             window.location.reload();
         }

@@ -4,10 +4,11 @@ import actions from './actions';
 
 const state = {
     name: "News",
+    currentPhoto: 1,
     curIdx: 0,
     data: {
         items: [
-            {title:''}
+            { title: '' }
         ]
     }
 }
