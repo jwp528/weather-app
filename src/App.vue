@@ -14,7 +14,7 @@ html {
   background: #000;
   max-width: 15in;
   margin: 0 auto;
-  /* overflow-y: hidden;  */
+  overflow-y: hidden;
   height: 100%;
 }
 </style>
