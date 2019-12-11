@@ -11,12 +11,5 @@ export default {
             state.curIdx = 0;
         else
             state.curIdx += 1;
-    },
-    rotate: (state) => {
-        if (state.currentPhoto === 10) {
-            state.currentPhoto = 1;
-        } else {
-            ++state.currentPhoto;
-        }
     }
 }
