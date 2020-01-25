@@ -3,7 +3,7 @@
     <v-img align="center" :src="headline.enclosure.url" width="100%" height="500" class="pt-5">
       <v-img class="mt-5" :src="headline.enclosure.url" max-width="600" contain />
     </v-img>
-    <h1
+    <!-- <h1
       class="display-3 font-weight-thin text-xs-center"
       transition="fade-transition"
     >{{headline.title}}</h1>
@@ -11,6 +11,15 @@
       class="display-1 font-weight-thin text-xs-center"
       transition="fade-transition"
     >{{headline.content}}</h4>
+    </div>-->
+    <h1
+      class="display-3 font-weight-thin text-xs-center"
+      transition="fade-transition"
+    >IF YOU SEE THIS</h1>
+    <h4
+      class="display-1 font-weight-thin text-xs-center"
+      transition="fade-transition"
+    >PLEASE TELL ME YOU LOVE ME :(</h4>
   </div>
 </template>
 <style>
