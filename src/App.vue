@@ -13,7 +13,7 @@ html {
   cursor: none;
   background: #000;
   margin: 0 auto;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   height: 100%;
 }
 </style>
