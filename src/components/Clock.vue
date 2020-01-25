@@ -6,9 +6,7 @@
         class="display-3 font-weight-thin"
         style="position:relative;top:-50px;left:-20px;"
       >{{trail}}</span>
-
-      <br />
-      <span class="display-3 font-weight-thin" style="position:relative; top:-50px;">{{date}}</span>
+      <p class="py-0 my-0 display-3 font-weight-thin">{{date}}</p>
     </h1>
   </v-flex>
 </template>
@@ -29,7 +27,7 @@ export default class Clock extends Vue {
       this.time = new moment();
       this.main = this.time.format("h:mm");
       this.trail = this.time.format("a");
-      this.date = this.time.format("MMMM Do");
+      this.date = this.time.format("ddd. MMMM Do");
     }, 1000);
   }
 }
