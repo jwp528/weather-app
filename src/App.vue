@@ -1,7 +1,7 @@
 <template>
   <v-app dark style="background:#000;">
     <!-- <fullscreen ref="fullscreen"> -->
-    <v-content>
+    <v-content class="ma-0 pa-0">
       <router-view></router-view>
     </v-content>
     <!-- </fullscreen> -->
@@ -12,9 +12,8 @@ body,
 html {
   cursor: none;
   background: #000;
-  max-width: 15in;
   margin: 0 auto;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   height: 100%;
 }
 </style>

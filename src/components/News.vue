@@ -1,39 +1,21 @@
 <template>
-  <v-layout column>
-    <v-layout align-center justify-center row fill-height class="text-xs-center mt-5">
-      <v-flex xs12 v-if="typeof headline !== 'undefined'">
-        <v-img :src="headline.enclosure.url" width="500" ratio="16:9" style="margin:0 auto" />
-        <h1
-          class="display-3 font-weight-thin text-xs-center"
-          transition="fade-transition"
-        >{{headline.title}}</h1>
-        <h4
-          class="display-1 font-weight-thin text-xs-center"
-          transition="fade-transition"
-        >{{headline.content}}</h4>
-      </v-flex>
-      <v-flex v-else xs12>
-        <v-img
-          src="https://via.placeholder.it/600x400?text=Image+Here"
-          width="500"
-          ratio="16:9"
-          style="margin:0 auto"
-        />
-        <h1
-          class="display-3 font-weight-thin text-xs-center"
-          transition="fade-transition"
-        >Local developer fucks up smart mirror</h1>
-        <h4
-          class="display-1 font-weight-thin text-xs-center"
-          transition="fade-transition"
-        >Dumbass london fuck boi can't figure out why this shit isn't working</h4>
-      </v-flex>
-    </v-layout>
-  </v-layout>
+  <div>
+    <v-img align="center" :src="headline.enclosure.url" width="100%" height="500" class="pt-5">
+      <v-img class="mt-5" :src="headline.enclosure.url" max-width="600" contain />
+    </v-img>
+    <h1
+      class="display-3 font-weight-thin text-xs-center"
+      transition="fade-transition"
+    >{{headline.title}}</h1>
+    <h4
+      class="display-1 font-weight-thin text-xs-center"
+      transition="fade-transition"
+    >{{headline.content}}</h4>
+  </div>
 </template>
 <style>
-.imageClass {
-  margin-top: 50px;
+.v-image__image--cover {
+  filter: blur(1.5rem);
 }
 </style>
 <script>

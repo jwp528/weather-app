@@ -1,15 +1,17 @@
 <template>
-  <v-container fluid>
-    <v-layout column>
-      <v-flex xs12>
-        <v-layout align-start justify-content-start row class="mb-5">
-          <CurrentWeather />
-          <Clock />
-        </v-layout>
-        <News />
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div>
+    <v-container fluid>
+      <v-layout column>
+        <v-flex xs12>
+          <v-layout align-start justify-content-start row class="mb-5">
+            <CurrentWeather />
+            <Clock />
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <News />
+  </div>
 </template>
 
 <script>
