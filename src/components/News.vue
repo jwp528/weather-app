@@ -5,7 +5,7 @@
     next-icon=" "
     prev-icon=" "
     :loading="true"
-    height="750"
+    height="700"
   >
     <v-carousel-item
       :show-arrows="false"
@@ -15,11 +15,13 @@
       class="text-xs-center"
       :src="headline.enclosure.url"
     >
-      <v-img align="center" justify="center" :src="headline.enclosure.url" class="pt-5">
-        <v-img class="pt-5" :src="headline.enclosure.url" max-width="600" contain />
-        <h1 class="display-3 font-weight-thin">{{headline.title}}</h1>
-        <h4 class="display-1 font-weight-thin">{{headline.content}}</h4>
-      </v-img>
+      <v-layout column justify-center align-center style="background:rgba(0,0,0,0.3)" fill-height>
+        <v-img align="center" justify="center" class="pt-5">
+          <v-img class="pt-5" :src="headline.enclosure.url" max-width="600" contain />
+          <h1 class="display-3 font-weight-thin">{{headline.title}}</h1>
+          <h4 class="display-1 font-weight-thin">{{headline.content}}</h4>
+        </v-img>
+      </v-layout>
     </v-carousel-item>
   </v-carousel>
 </template>
