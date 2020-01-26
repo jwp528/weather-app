@@ -4,7 +4,6 @@ import actions from './actions';
 
 const state = {
     name: "News",
-    curIdx: 0,
     data: {
         items: [
             { title: '' }
