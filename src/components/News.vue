@@ -6,12 +6,14 @@
     prev-icon=" "
     :loading="true"
     height="700"
+    @change="slideChange($event)"
   >
     <v-carousel-item
       :show-arrows="false"
-      v-for="headline in news.data.items"
-      :key="headline"
+      v-for="(headline, index) in news.data.items"
+      :key="index"
       transition="fade-transition"
+      reverse-transition="fade-transition"
       class="text-xs-center"
       :src="headline.enclosure.url"
     >
@@ -40,5 +42,12 @@ const news = namespace("news/");
 @Component()
 export default class News extends Vue {
   @State news;
+  @Action("news/fetch") fetch;
+
+  slideChange(index) {
+    if (index === this.news.data.items.length - 1) {
+      this.fetch();
+    }
+  }
 } // end class
 </script>
