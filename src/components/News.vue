@@ -17,7 +17,7 @@
       class="text-xs-center"
       :src="headline.enclosure.url"
     >
-      <v-layout column justify-center align-center style="background:rgba(0,0,0,0.3)" fill-height>
+      <v-layout column justify-center align-center id="overlay" fill-height>
         <v-img align="center" justify="center" class="pt-5">
           <v-img class="pt-5" :src="headline.enclosure.url" max-width="600" contain />
           <h1 class="display-3 font-weight-thin">{{headline.title}}</h1>
@@ -30,6 +30,10 @@
 <style>
 .v-image__image--cover {
   filter: blur(1.5rem);
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.5);
 }
 </style>
 <script>
