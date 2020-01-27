@@ -5,7 +5,7 @@
     next-icon=" "
     prev-icon=" "
     :loading="true"
-    height="700"
+    height="750"
     @change="slideChange($event)"
   >
     <v-carousel-item
